@@ -23,7 +23,7 @@ def writefile():
     with open(asnum + ".json", "r") as the_file:
         lines = the_file.readlines()
         # lines = list(filter(lambda line: 'rrc00.ripe.net' in line, lines))
-        out = ",".join(lines[len(lines) - 10000:])
+        out = ",".join(lines[len(lines) - 10000 :])
         with open(asnum + ".js", "w") as js_file:
             js_file.write(f"load_js([{out}]);")
 
